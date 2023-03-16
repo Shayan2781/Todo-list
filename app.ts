@@ -227,7 +227,7 @@ const viewCompleted = document.getElementById("display-completed");
 viewCompleted?.addEventListener('click', function(){
     displayCompleted();
     viewCompleted.previousElementSibling?.classList.remove('selected');
-    viewCompleted.previousElementSibling?.classList.remove('selected');
+    viewCompleted.previousElementSibling?.previousElementSibling?.classList.remove('selected');
     viewCompleted.classList.add('selected');
 
 });

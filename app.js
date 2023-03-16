@@ -14,6 +14,8 @@ themeSwitcher.addEventListener('click', function () {
         rt.style.setProperty("--background-main", 'hsl(0, 0%, 98%)');
         rt.style.setProperty("--section-background", 'hsl(236, 33%, 92%)');
         rt.style.setProperty("--text-color", 'black');
+        rt.style.setProperty("--content-border", 'hsl(236, 9%, 61%)');
+        rt.style.setProperty("--selected-text-color", 'rgb(99, 99, 99)');
     }
     else {
         darkTheme = true;
@@ -23,6 +25,8 @@ themeSwitcher.addEventListener('click', function () {
         rt.style.setProperty("--background-main", 'hsl(235, 21%, 11%)');
         rt.style.setProperty("--section-background", 'hsl(235, 24%, 19%)');
         rt.style.setProperty("--text-color", 'white');
+        rt.style.setProperty("--content-border", 'hsl(236, 9%, 61%)');
+        rt.style.setProperty("--selected-text-color", 'rgb(99, 99, 99)');
     }
 });
 updateTaskCount();
@@ -206,10 +210,10 @@ viewActive === null || viewActive === void 0 ? void 0 : viewActive.addEventListe
 });
 var viewCompleted = document.getElementById("display-completed");
 viewCompleted === null || viewCompleted === void 0 ? void 0 : viewCompleted.addEventListener('click', function () {
-    var _a, _b;
+    var _a, _b, _c;
     displayCompleted();
     (_a = viewCompleted.previousElementSibling) === null || _a === void 0 ? void 0 : _a.classList.remove('selected');
-    (_b = viewCompleted.previousElementSibling) === null || _b === void 0 ? void 0 : _b.classList.remove('selected');
+    (_c = (_b = viewCompleted.previousElementSibling) === null || _b === void 0 ? void 0 : _b.previousElementSibling) === null || _c === void 0 ? void 0 : _c.classList.remove('selected');
     viewCompleted.classList.add('selected');
 });
 var controlTab = document.getElementById('filters');
