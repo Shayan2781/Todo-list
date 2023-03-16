@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>To-do List</title>
+</head>
+<body>
+    <main id = "main-container"class="main-container">
+        <div class="main-container__header">
+            <h2>T O D O</h2>
+            <div id = "theme-toggle" class="dark-mode-icon"></div>
+        </div>
+        <div class="main-container__new-task-holder">
+            <div class="main-container__new-task-holder__check-box"></div>
+            <input id="new-task-input" type="text" placeholder="Create a new to do...">
+        </div>
+        <div class="main-container__body">
+            <div id="content-list" class="main-container__body__content">            
+            </div>
+            <div id= "contorls-container"class="main-container__body__controls">
+                <p id = "items-left">n items left</p>
+                <div id = "filters"class="main-container__body__controls__filters">
+                    <p class="main-container__body__controls__filters__element" id="display-all">All</p>
+                    <p class="main-container__body__controls__filters__element" id="display-active">Active</p>
+                    <p class="main-container__body__controls__filters__element" id="display-completed">Completed</p>                   
+                 </div>
+                 <p class="main-container__body__controls__filters__element" id = "clear-completed">Clear Completed</p>
+            </div>
+
+        </div>
+        <p id = "drag-and-drop-text"class="drag-and-drop-text">Drag and drop to reorder list</p>
+    </main>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+        <script src="./app.js"></script>
+        <script>
+            const dragArea = document.getElementById("content-list");
+            new Sortable(dragArea, {
+                animation: 350
+            })
+        </script>
+</body>
+</html>
