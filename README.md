@@ -2,7 +2,7 @@
 Intern project for Front-End development in Bale Co.
 
 This To-do list has the options of Adding, Removing, Rearranging and Marking tasks which comes with both dark and light theme
-which is also has a responsive desing 
+which also has a responsive design 
 
 ![desktop-preview](https://user-images.githubusercontent.com/99325811/225574307-90f3eb88-7280-4dbf-b413-980aa9cd1963.jpg)
 
